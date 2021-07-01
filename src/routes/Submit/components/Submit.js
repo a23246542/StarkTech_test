@@ -13,7 +13,8 @@ function Submit() {
     setIsDarkMode((prevState) => !prevState);
   };
 
-  const goToHomePage = () => {
+  const goToHomePage = (e) => {
+    e.preventDefault();
     history.goBack();
   };
 
@@ -21,7 +22,7 @@ function Submit() {
     <div className="app">
       <section className="section">
         <div className="buttons level-right">
-          <a onClick={goToHomePage} className="button is-link" href>
+          <a onClick={goToHomePage} className="button is-link" href="true">
             HomePage
           </a>
         </div>

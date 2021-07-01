@@ -13,7 +13,8 @@ function App() {
     setIsDarkMode((prevState) => !prevState);
   };
 
-  const goToSubmitPage = () => {
+  const goToSubmitPage = (e) => {
+    e.preventDefault();
     history.push('/submit');
   };
 
@@ -70,10 +71,10 @@ function App() {
 
       <section className="section">
         <div className="buttons level-right">
-          <a className="button is-primary" href>
+          <a className="button is-primary" href="true">
             Save
           </a>
-          <a onClick={goToSubmitPage} className="button is-link" href>
+          <a onClick={goToSubmitPage} className="button is-link" href="true">
             Submit
           </a>
         </div>
