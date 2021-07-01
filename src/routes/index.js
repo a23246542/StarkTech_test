@@ -1,5 +1,15 @@
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './App';
 
-// Use something like react-router-dom to manage multiple pages/routes
+const RouterView = () => {
+  return (
+    <Router>
+      <Route path="/" exact>
+        <Home />
+      </Route>
+    </Router>
+  );
+};
 
-export default Home;
+export default RouterView;
