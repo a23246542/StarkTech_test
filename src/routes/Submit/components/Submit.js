@@ -3,9 +3,9 @@ import { ThemeContext } from '../../../common/contexts/ThemeContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
-import '../styles/_app.scss';
+import '../styles/_submit.scss';
 
-function App() {
+function Submit() {
   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
   const history = useHistory();
 
@@ -13,12 +13,19 @@ function App() {
     setIsDarkMode((prevState) => !prevState);
   };
 
-  const goToSubmitPage = () => {
-    history.push('/submit');
+  const goToHomePage = () => {
+    history.goBack();
   };
 
   return (
     <div className="app">
+      <section className="section">
+        <div className="buttons level-right">
+          <a onClick={goToHomePage} className="button is-link" href>
+            HomePage
+          </a>
+        </div>
+      </section>
       <div className="level">
         <div>
           <h1 className="title">Dark Mode Challenge Dark Mode Challenge</h1>
@@ -55,31 +62,8 @@ function App() {
           </p>
         </div>
       </div>
-
-      <div className="field">
-        <div className="control">
-          <input className="input" type="text" placeholder="Name" />
-        </div>
-      </div>
-
-      <div className="field">
-        <div className="control">
-          <input className="input" type="text" placeholder="Email" />
-        </div>
-      </div>
-
-      <section className="section">
-        <div className="buttons level-right">
-          <a className="button is-primary" href>
-            Save
-          </a>
-          <a onClick={goToSubmitPage} className="button is-link" href>
-            Submit
-          </a>
-        </div>
-      </section>
     </div>
   );
 }
 
-export default App;
+export default Submit;
