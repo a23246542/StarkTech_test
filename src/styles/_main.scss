@@ -25,6 +25,11 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
+#root {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
 // Import only what you need from Bulma
 @import '~bulma/bulma.sass';
 @import './dark-mode';

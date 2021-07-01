@@ -10,6 +10,7 @@ function App() {
   const switchDarkMode = () => {
     setIsDarkMode((prevState) => !prevState);
   };
+
   return (
     <div className="app">
       <div className="level">
