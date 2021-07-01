@@ -71,12 +71,10 @@ function App() {
 
       <section className="section">
         <div className="buttons level-right">
-          <a className="button is-primary" href="true">
-            Save
-          </a>
-          <a onClick={goToSubmitPage} className="button is-link" href="true">
+          <button className="button is-primary">Save</button>
+          <button onClick={goToSubmitPage} className="button is-link">
             Submit
-          </a>
+          </button>
         </div>
       </section>
     </div>

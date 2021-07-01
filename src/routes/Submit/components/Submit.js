@@ -22,9 +22,9 @@ function Submit() {
     <div className="app">
       <section className="section">
         <div className="buttons level-right">
-          <a onClick={goToHomePage} className="button is-link" href="true">
+          <button onClick={goToHomePage} className="button is-link" href="true">
             HomePage
-          </a>
+          </button>
         </div>
       </section>
       <div className="level">
